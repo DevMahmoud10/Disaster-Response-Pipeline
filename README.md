@@ -22,8 +22,8 @@ This project focuses on analyzing disaster data from [Figure Eight](https://www.
 - data
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
-|- messages.csv # processed messages
 |- DisasterResponse.db   # database to save clean data to
+|- process_data.py
 
 - models
 |- train_classifier.py
@@ -41,10 +41,10 @@ You can find all required libraries that used in this project in ```requirements
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+        `python models/train_classifier.py data/DisasterResponse.db models/model.pkl`
 
 2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+    `python app/run.py`
 
 3. Go to http://0.0.0.0:3001/
 
